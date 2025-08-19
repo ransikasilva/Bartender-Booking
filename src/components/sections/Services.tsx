@@ -174,7 +174,7 @@ const Services = () => {
                   Ready to Elevate Your Event?
                 </h3>
                 <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-                  Book your consultation today and let's create an unforgettable experience 
+                  Book your consultation today and let&apos;s create an unforgettable experience 
                   that will have your guests talking for years to come.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

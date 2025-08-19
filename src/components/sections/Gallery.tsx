@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Camera, Filter, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/common/ScrollAnimations";
+import { ScrollReveal } from "@/components/common/ScrollAnimations";
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -139,7 +139,7 @@ const Gallery = () => {
               <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
                 Event <span className="text-gradient">Gallery</span>
                 <br />
-                Moments We've Crafted
+                Moments We&apos;ve Crafted
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.4}>

@@ -17,7 +17,7 @@ const Testimonials = () => {
       name: "Sarah & Michael Thompson",
       role: "Wedding Couple",
       event: "Luxury Wedding Reception",
-      content: "LuxBar transformed our wedding into pure magic! Their bartenders didn't just serve drinks – they created an entire experience. Our guests are still talking about the custom cocktails and the incredible flair show. Worth every penny!",
+      content: "LuxBar transformed our wedding into pure magic! Their bartenders didn&apos;t just serve drinks – they created an entire experience. Our guests are still talking about the custom cocktails and the incredible flair show. Worth every penny!",
       rating: 5,
       date: "September 2024"
     },
@@ -26,7 +26,7 @@ const Testimonials = () => {
       name: "James Rodriguez",
       role: "Corporate Event Manager",
       event: "Tech Company Launch Party",
-      content: "Professional, sophisticated, and absolutely flawless. The LuxBar team elevated our product launch to the next level. Their attention to detail and premium service impressed all our VIP clients. We'll definitely be booking them again!",
+      content: "Professional, sophisticated, and absolutely flawless. The LuxBar team elevated our product launch to the next level. Their attention to detail and premium service impressed all our VIP clients. We&apos;ll definitely be booking them again!",
       rating: 5,
       date: "August 2024"
     },
@@ -123,7 +123,7 @@ const Testimonials = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.4}>
               <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-                Don't just take our word for it. Here's what our satisfied clients have to say 
+                Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say 
                 about their unforgettable experiences with LuxBar.
               </p>
             </ScrollReveal>

@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/common/ScrollAnimations";
+import { ScrollReveal } from "@/components/common/ScrollAnimations";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -140,7 +140,7 @@ const Contact = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-                Let's Create Something
+                Let&apos;s Create Something
                 <br />
                 <span className="text-gradient">Extraordinary</span>
               </h2>
@@ -148,7 +148,7 @@ const Contact = () => {
             <ScrollReveal direction="up" delay={0.4}>
               <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
                 Ready to elevate your event? Get in touch with us today for a personalized 
-                consultation and let's craft an unforgettable experience together.
+                consultation and let&apos;s craft an unforgettable experience together.
               </p>
             </ScrollReveal>
           </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                     </div>
                     <h4 className="text-3xl font-display font-bold text-white mb-4">Booking Request Sent!</h4>
                     <p className="text-white/70 text-lg max-w-md mx-auto">
-                      Thank you for choosing LuxBar. We'll contact you within 2 hours with a personalized quote.
+                      Thank you for choosing LuxBar. We&apos;ll contact you within 2 hours with a personalized quote.
                     </p>
                   </motion.div>
                 ) : (
@@ -465,7 +465,7 @@ const Contact = () => {
                     Urgent Booking?
                   </h3>
                   <p className="text-white/80 mb-4 text-sm">
-                    Need last-minute bartending services? We're here to help!
+                    Need last-minute bartending services? We&apos;re here to help!
                   </p>
                   <Button
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-2 text-sm h-10"

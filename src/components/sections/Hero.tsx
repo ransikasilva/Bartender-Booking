@@ -14,7 +14,6 @@ const Hero = () => {
   });
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
