@@ -52,7 +52,8 @@ const Header = () => {
         right: 0,
         zIndex: 50,
         width: '100%',
-        padding: scrolled ? '8px 0' : '12px 0'
+        height: '72px',
+        padding: '12px 0'
       }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between">

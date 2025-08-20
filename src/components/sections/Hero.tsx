@@ -62,10 +62,12 @@ const Hero = () => {
       id="hero" 
       className="relative overflow-hidden"
       style={{
-        minHeight: '100vh',
+        height: '100vh',
+        maxHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        position: 'relative'
       }}
     >
       {/* Background Image with Parallax */}
@@ -118,9 +120,11 @@ const Hero = () => {
 
       {/* Main Content */}
       <div 
-        className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center"
+        className="relative z-20 w-full text-center"
         style={{
-          paddingTop: '3rem'
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '80px 24px 0 24px'
         }}
       >
         <motion.div
@@ -151,8 +155,9 @@ const Hero = () => {
             variants={itemVariants}
             className="font-display font-bold leading-tight"
             style={{
-              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
-              lineHeight: '1.1'
+              fontSize: '4rem',
+              lineHeight: '1.1',
+              marginBottom: '2rem'
             }}
           >
             <span className="text-white">Premium</span>
@@ -167,7 +172,14 @@ const Hero = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed text-center px-4"
+            className="text-white/80 text-center"
+            style={{
+              fontSize: '20px',
+              lineHeight: '1.6',
+              maxWidth: '768px',
+              margin: '0 auto 48px auto',
+              padding: '0 16px'
+            }}
           >
             Elevate your event with world-class bartending services. 
             Professional flair, premium spirits, and unforgettable experiences 
@@ -177,7 +189,15 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '24px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '0 16px',
+              marginBottom: '24px'
+            }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <Button
@@ -206,28 +226,34 @@ const Hero = () => {
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
-            className="pt-12 pb-8"
             style={{
-              marginTop: '3rem',
-              marginBottom: '2rem'
+              marginTop: '48px',
+              marginBottom: '32px'
             }}
           >
-            <p className="text-white/60 text-sm mb-6" style={{marginBottom: '1.5rem'}}>
+            <p 
+              className="text-white/60"
+              style={{
+                fontSize: '14px',
+                marginBottom: '24px',
+                color: 'rgba(255, 255, 255, 0.6)'
+              }}
+            >
               Trusted by premium venues and private clients
             </p>
             <div 
-              className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/40"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'center',
-                gap: '2rem'
+                gap: '32px',
+                color: 'rgba(255, 255, 255, 0.4)'
               }}
             >
-              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Luxury Hotels</span>
-              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Corporate Events</span>
-              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Private Parties</span>
-              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Weddings</span>
+              <span style={{fontSize: '18px', fontWeight: '600'}}>Luxury Hotels</span>
+              <span style={{fontSize: '18px', fontWeight: '600'}}>Corporate Events</span>
+              <span style={{fontSize: '18px', fontWeight: '600'}}>Private Parties</span>
+              <span style={{fontSize: '18px', fontWeight: '600'}}>Weddings</span>
             </div>
           </motion.div>
         </motion.div>
