@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
     // your project has TypeScript errors.
     ignoreBuildErrors: true,
   },
+  experimental: {
+    optimizeCss: false, // Disable CSS optimization to prevent purging issues
+  },
+  compiler: {
+    removeConsole: false, // Keep console logs for debugging
+  },
 };
 
 export default nextConfig;

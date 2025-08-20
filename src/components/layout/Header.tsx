@@ -40,7 +40,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+      className={`header-fixed transition-all duration-500 ${
         scrolled
           ? "glass-morphism py-2 md:py-4"
           : "bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none py-3 md:py-6"
@@ -97,7 +97,7 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 h-screen w-80 glass-morphism md:hidden z-[120]"
+              className="fixed top-0 right-0 h-screen w-80 bg-black/95 backdrop-blur-lg border-l border-white/10 md:hidden z-[120]"
             >
               {/* Close button - always visible */}
               <div className="absolute top-4 right-4">

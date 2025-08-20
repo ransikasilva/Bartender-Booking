@@ -57,7 +57,7 @@ const Hero = () => {
   };
 
   return (
-    <section ref={ref} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={ref} id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" style={{minHeight: '100vh'}}>
       {/* Background Image with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0" 
@@ -107,7 +107,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center pt-24 md:pt-0">
+      <div className="hero-content relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center pt-24 md:pt-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
