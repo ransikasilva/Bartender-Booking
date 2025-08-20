@@ -111,11 +111,10 @@
   /* Fix for production CSS issues - Ensure consistent layout */
   #hero {
     min-height: 100vh !important;
-    height: 100vh !important;
   }
   
   .hero-content {
-    padding-top: 6rem !important;
+    padding-top: 4rem !important;
   }
   
   .header-fixed {

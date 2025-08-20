@@ -57,7 +57,7 @@ const Hero = () => {
   };
 
   return (
-    <section ref={ref} id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" style={{minHeight: '100vh'}}>
+    <section ref={ref} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0" 
@@ -107,12 +107,12 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="hero-content relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center pt-24 md:pt-0">
+      <div className="hero-content relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
+          className="space-y-6"
         >
           {/* Stats Bar */}
           <motion.div
@@ -158,7 +158,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-8 sm:mt-12 px-4"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <Button
@@ -187,14 +187,14 @@ const Hero = () => {
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
-            className="pt-16 pb-20"
+            className="pt-8 pb-12"
           >
-            <p className="text-white/60 text-sm mb-6">Trusted by premium venues and private clients</p>
-            <div className="flex justify-center space-x-8 text-white/40">
-              <span className="text-lg font-semibold">Luxury Hotels</span>
-              <span className="text-lg font-semibold">Corporate Events</span>
-              <span className="text-lg font-semibold">Private Parties</span>
-              <span className="text-lg font-semibold">Weddings</span>
+            <p className="text-white/60 text-sm mb-4">Trusted by premium venues and private clients</p>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/40">
+              <span className="text-sm md:text-lg font-semibold">Luxury Hotels</span>
+              <span className="text-sm md:text-lg font-semibold">Corporate Events</span>
+              <span className="text-sm md:text-lg font-semibold">Private Parties</span>
+              <span className="text-sm md:text-lg font-semibold">Weddings</span>
             </div>
           </motion.div>
         </motion.div>
