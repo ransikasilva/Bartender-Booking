@@ -157,16 +157,16 @@ export const StaggerItem = ({ children, className = "" }: StaggerItemProps) => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
     },
   };
 
   return (
     <motion.div
       variants={itemVariants}
+      transition={{
+        duration: 0.6,
+        ease: [0.21, 1.11, 0.81, 0.99] as any,
+      }}
       className={className}
     >
       {children}
@@ -181,7 +181,7 @@ export const ScrollProgress = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/60 origin-left z-[100]"
+      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/60 origin-left z-[110]"
       style={{ scaleX }}
     />
   );

@@ -77,29 +77,37 @@ const Hero = () => {
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-10">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-primary/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [-20, -100, -20],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          // Use deterministic positioning based on index
+          const leftPosition = (i * 17 + 23) % 100;
+          const topPosition = (i * 31 + 47) % 100;
+          const duration = 3 + (i % 3);
+          const delay = (i % 5) * 0.4;
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-primary/20 rounded-full"
+              style={{
+                left: `${leftPosition}%`,
+                top: `${topPosition}%`,
+              }}
+              animate={{
+                y: [-20, -100, -20],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration,
+                repeat: Infinity,
+                delay,
+              }}
+            />
+          );
+        })}
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
+      <div className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center pt-24 md:pt-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -109,24 +117,24 @@ const Hero = () => {
           {/* Stats Bar */}
           <motion.div
             variants={itemVariants}
-            className="flex justify-center mb-16"
+            className="flex justify-center mb-12 md:mb-16 relative z-30"
           >
-            <div className="glass-morphism rounded-full px-6 py-3 flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-primary fill-current" />
-                <span className="text-sm text-white/90">5.0 Rating</span>
+            <div className="glass-morphism rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center space-x-3 md:space-x-6">
+              <div className="flex items-center space-x-1 md:space-x-2">
+                <Star className="w-3 h-3 md:w-4 md:h-4 text-primary fill-current" />
+                <span className="text-xs md:text-sm text-white/90">5.0 Rating</span>
               </div>
-              <div className="w-px h-4 bg-white/20" />
-              <span className="text-sm text-white/90">500+ Events</span>
-              <div className="w-px h-4 bg-white/20" />
-              <span className="text-sm text-white/90">10+ Years</span>
+              <div className="w-px h-3 md:h-4 bg-white/20" />
+              <span className="text-xs md:text-sm text-white/90">500+ Events</span>
+              <div className="w-px h-3 md:h-4 bg-white/20" />
+              <span className="text-xs md:text-sm text-white/90">10+ Years</span>
             </div>
           </motion.div>
 
           {/* Main Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight"
           >
             <span className="text-white">Premium</span>
             <br />

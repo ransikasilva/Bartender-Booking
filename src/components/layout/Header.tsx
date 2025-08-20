@@ -40,10 +40,10 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
         scrolled
-          ? "glass-morphism py-4"
-          : "bg-transparent py-6"
+          ? "glass-morphism py-2 md:py-4"
+          : "bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none py-3 md:py-6"
       }`}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between">
@@ -97,8 +97,18 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 h-screen w-80 glass-morphism md:hidden"
+              className="fixed top-0 right-0 h-screen w-80 glass-morphism md:hidden z-[120]"
             >
+              {/* Close button - always visible */}
+              <div className="absolute top-4 right-4">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="w-10 h-10 rounded-full glass-morphism text-white hover:bg-white/10 border border-white/10 hover:border-primary/30 transition-all flex items-center justify-center"
+                  aria-label="Close mobile menu"
+                >
+                  <X size={20} />
+                </button>
+              </div>
               <div className="flex flex-col h-full p-6 pt-20">
                 {navItems.map((item, index) => (
                   <motion.button
