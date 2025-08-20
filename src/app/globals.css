@@ -108,20 +108,4 @@
     perspective: 1000px;
   }
   
-  /* Fix for production CSS issues - Ensure consistent layout */
-  #hero {
-    min-height: 100vh !important;
-  }
-  
-  .hero-content {
-    padding-top: 4rem !important;
-  }
-  
-  .header-fixed {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 100 !important;
-  }
 }
