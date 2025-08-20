@@ -60,10 +60,12 @@ const Hero = () => {
     <section 
       ref={ref} 
       id="hero" 
-      className="relative flex items-center justify-center overflow-hidden"
+      className="relative overflow-hidden"
       style={{
         minHeight: '100vh',
-        height: '100vh'
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
       {/* Background Image with Parallax */}
@@ -118,14 +120,14 @@ const Hero = () => {
       <div 
         className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center"
         style={{
-          paddingTop: '5rem'
+          paddingTop: '3rem'
         }}
       >
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-6"
+          className="space-y-8"
         >
           {/* Stats Bar */}
           <motion.div
@@ -147,7 +149,11 @@ const Hero = () => {
           {/* Main Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight"
+            className="font-display font-bold leading-tight"
+            style={{
+              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+              lineHeight: '1.1'
+            }}
           >
             <span className="text-white">Premium</span>
             <br />
@@ -200,14 +206,28 @@ const Hero = () => {
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
-            className="pt-8 pb-12"
+            className="pt-12 pb-8"
+            style={{
+              marginTop: '3rem',
+              marginBottom: '2rem'
+            }}
           >
-            <p className="text-white/60 text-sm mb-4">Trusted by premium venues and private clients</p>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/40">
-              <span className="text-sm md:text-lg font-semibold">Luxury Hotels</span>
-              <span className="text-sm md:text-lg font-semibold">Corporate Events</span>
-              <span className="text-sm md:text-lg font-semibold">Private Parties</span>
-              <span className="text-sm md:text-lg font-semibold">Weddings</span>
+            <p className="text-white/60 text-sm mb-6" style={{marginBottom: '1.5rem'}}>
+              Trusted by premium venues and private clients
+            </p>
+            <div 
+              className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/40"
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: '2rem'
+              }}
+            >
+              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Luxury Hotels</span>
+              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Corporate Events</span>
+              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Private Parties</span>
+              <span className="text-lg font-semibold" style={{fontSize: '1.125rem'}}>Weddings</span>
             </div>
           </motion.div>
         </motion.div>

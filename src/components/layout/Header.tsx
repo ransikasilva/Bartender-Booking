@@ -42,8 +42,8 @@ const Header = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass-morphism py-2 md:py-4"
-          : "bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none py-3 md:py-6"
+          ? "glass-morphism"
+          : "bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none"
       }`}
       style={{
         position: 'fixed',
@@ -51,7 +51,8 @@ const Header = () => {
         left: 0,
         right: 0,
         zIndex: 50,
-        width: '100%'
+        width: '100%',
+        padding: scrolled ? '8px 0' : '12px 0'
       }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between">
